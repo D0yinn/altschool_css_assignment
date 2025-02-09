@@ -1,0 +1,91 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+margin: 0;
+}
+
+body {
+/* 3. Add accessible line-height */
+line-height: 1.5;
+/* 4. Improve text rendering */
+-webkit-font-smoothing: antialiased;
+background-color: #9C9EC4;
+/* width: 100%; */
+display: flex;
+justify-content: center;
+place-items: center;
+min-height: 100vh;}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+font: inherit;
+}
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+text-wrap: balance;
+}
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+isolation: isolate;
+}
+.wrapper {
+    position: relative;
+    background-color: #ffffff;
+    width: 380px;
+    height: 460px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+img {
+    width: 400px;
+    height: auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.new-container {
+    position: absolute;
+    background-color: #FFEFB1;
+    left: -0.5rem;
+    top: 0.5rem;
+    width: 180px;
+    padding: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%); */
+}
+.text {
+    margin: 5%;
+    font-family: calibri bold;
+    font-size: 1.01rem;
+}
+h2 {
+    margin-bottom: 7px;
+}
+.highlight {
+    color: #4C4C4C;
+    font-size: medium;
+}
